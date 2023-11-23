@@ -22,7 +22,7 @@ export default function Home() {
           <div className="w-[1.5px] h-[185px] bg-gray-400 self-center" />
         </div>
 
-        <img
+        <Image
           src="media/ahmedphoto.JPG"
           className="z-0 object-cover w-full h-full opacity-20"
         />

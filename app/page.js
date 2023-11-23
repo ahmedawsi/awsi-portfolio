@@ -1,12 +1,13 @@
 import Image from "next/image";
 import WorkPost from "./components/work-post";
+import SocialCard from "./components/social-card";
 
 export default function Home() {
   return (
     <div>
       <div className="h-screen min-w-screen">
-        <div className="absolute z-20 flex flex-col items-center justify-center w-full h-full gap-3 backdrop-blur-xs">
-          <p className="text-4xl ">Ahmed Awsi</p>
+        <div className="absolute z-20 flex flex-col items-center justify-center w-full h-full gap-3 backdrop-blur-sm">
+          <p className="text-5xl opacity-90">Ahmed Awsi</p>
           <p className="px-6 text-center opacity-70">
             B.Sc. in CS & IT | Software developer & UI/UX designer
           </p>
@@ -22,7 +23,7 @@ export default function Home() {
           <div className="w-[1.5px] h-[185px] bg-gray-400 self-center" />
         </div>
 
-        <Image
+        <img
           src="media/ahmedphoto.JPG"
           className="z-0 object-cover w-full h-full opacity-20"
         />
@@ -30,20 +31,62 @@ export default function Home() {
       <div className="flex flex-col justify-center w-full h-fit">
         <div className="h-fit pt-[90px] w-full flex flex-col gap-5 justify-center">
           <p className="text-2xl font-medium text-center">My Work</p>
-          <div className="bg-[#141414] mb-11 rounded-xl py-4 px-4 self-center gap-5 grid items-center justify-center content-center
-            w-[80%] grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3">
+          <div
+            className="bg-[#0e0e0e] mb-11 rounded-xl py-4 px-4 self-center gap-5 grid items-center justify-center content-center
+            w-[80%] grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3"
+          >
+            <WorkPost title="Music App UI" imgSrc="media/musicapp.png" />
+            <WorkPost title="Movies App UI" imgSrc="media/moviesapp.png" />
             <WorkPost
-              title="test one two three"
-              imgSrc="media/ahmedphoto.JPG"
+              title="Transactions App UI"
+              imgSrc="media/transactionsapp.png"
+              figProtoLink="https://www.figma.com/proto/wFFf9ryuyQZEu4avqtvdtq/Transactions-App?type=design&node-id=1-2&t=pr9s3mEdEwfOD7zR-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design"
             />
+            <WorkPost title="Articles App UI" imgSrc="media/articlesapp.png" />
             <WorkPost
-              title="test one two three"
-              imgSrc="media/ahmedphoto.JPG"
+              title="Food App UI"
+              imgSrc="media/foodapp.png"
+              figProtoLink="https://www.figma.com/proto/hgwZEp08VhEZTWDQdwykFS/Food-App?type=design&node-id=439-238&t=vDz2DnS6iSYap5hX-1&scaling=scale-down&page-id=439%3A6&starting-point-node-id=439%3A238&mode=design"
             />
-            <WorkPost
-              title="test one two three"
-              imgSrc="media/ahmedphoto.JPG"
-            />
+          </div>
+          <p className="text-2xl font-medium text-center">Get in touch</p>
+          <form className="flex justify-center w-full">
+            <div
+              className="bg-[#0e0e0e] mb-11 rounded-xl py-4 px-4 self-center gap-5 grid
+              w-[80%] max-w-[600px] grid-cols-1"
+            >
+              <input
+                className="w-full bg-[#222222] rounded-md p-2"
+                placeholder="Your email"
+              />
+              <textarea
+                className="w-full h-52 bg-[#222222] rounded-md p-2"
+                placeholder="Your message"
+              />
+              <div className="flex justify-end w-full">
+                <button className="w-[150px] h-fit py-2 bg-[#333333] rounded-lg">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+          <div className="flex flex-col justify-center w-full gap-2 h-fit">
+            <p className="text-2xl font-medium text-center">Social Accounts</p>
+            <p className="text-sm text-center opacity-80">
+              I publish all the good stuff there!
+            </p>
+            <div className="flex flex-col items-center self-center justify-center grid-cols-2 gap-5 px-4 py-4 tablet:flex-row desktop:flex-row mb-11 rounded-xl w-fit">
+              <SocialCard
+                title="Instagram"
+                imgSrc="media/social-media-icons/instagram_48px.png"
+                socialLink="https://instagram.com/awsidev"
+              />
+              <SocialCard
+                title="Dribbble"
+                imgSrc="media/social-media-icons/dribbble_48px.png"
+                socialLink="https://dribbble.com/ahmedawsi"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useRef, useLayoutEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function WorkPost({ title, imgSrc, figProtoLink }) {
   const [isOpen, setIsOpen] = useState(true);
-
+  
   return (
     <div
       layout

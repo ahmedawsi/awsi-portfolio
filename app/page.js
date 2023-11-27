@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, {useRef} from "react";
 import emailjs from "@emailjs/browser";
 import WorkPost from "./components/work-post";
 import SocialCard from "./components/social-card";
-import {motion} from "framer-motion";
 
 export default function Home() {
   const form = useRef();

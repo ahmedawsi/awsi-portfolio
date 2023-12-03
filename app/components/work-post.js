@@ -8,7 +8,6 @@ export default function WorkPost({ alt, title, imgSrc, figProtoLink }) {
   
   return (
     <div
-      layout
       className="flex flex-col w-full gap-4 p-4 bg-[#1e1e1e] rounded-xl overflow-y-hidden"
       onClick={() => {
         setIsOpen(!isOpen);
@@ -16,7 +15,6 @@ export default function WorkPost({ alt, title, imgSrc, figProtoLink }) {
     >
       <Image
         alt={alt}
-        layout="position"
         src={imgSrc}
         className="object-cover w-full h-full rounded-md drop-shadow-[0_5px_8px_rgba(0,0,0,0.5)]"
         width="350"
@@ -24,7 +22,6 @@ export default function WorkPost({ alt, title, imgSrc, figProtoLink }) {
       />
 
       <div
-        layout="position"
         className="flex flex-row items-center justify-between gap-5"
       >
         <p className="py-[5px]">{title}</p>

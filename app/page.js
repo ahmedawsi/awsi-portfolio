@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="h-screen min-w-screen">
+      <div className="h-screen min-w-screen" style={{position: "relative"}}>
         <div className="absolute z-20 flex flex-col items-center justify-center w-full h-full gap-3 backdrop-blur-sm">
           <p className="text-5xl opacity-90">Ahmed Awsi</p>
           <p className="px-6 text-center opacity-70">
@@ -57,36 +57,40 @@ export default function Home() {
           className="z-0 object-cover w-full h-full opacity-20"
           alt="A photo of Ahmed"
           fill="true"
+          priority="true"
         />
       </div>
       <div className="flex flex-col justify-center w-full h-fit">
         <div className="h-fit pt-[90px] w-full flex flex-col gap-5 justify-center">
           <p className="text-2xl font-medium text-center">My Work</p>
           <div
-            layout
-            layoutRoot
             className="bg-[#0e0e0e] mb-11 rounded-xl py-4 px-4 self-center gap-5 grid items-start justify-center content-center
             w-[80%] grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3"
           >
             <WorkPost
               title="Music App UI"
+              alt="Music App UI image"
               imgSrc={imagesPath + "musicapp.jpg"}
             />
             <WorkPost
               title="Movies App UI"
+              alt="Movies App UI image"
               imgSrc={imagesPath + "moviesapp.jpg"}
             />
             <WorkPost
               title="Transactions App UI"
+              alt="Transactions App UI image"
               imgSrc={imagesPath + "transactionsapp.jpg"}
               figProtoLink="https://www.figma.com/proto/wFFf9ryuyQZEu4avqtvdtq/Transactions-App?type=design&node-id=1-2&t=pr9s3mEdEwfOD7zR-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design"
             />
             <WorkPost
               title="Articles App UI"
+              alt="Articles App UI image"
               imgSrc={imagesPath + "articlesapp.jpg"}
             />
             <WorkPost
               title="Food App UI"
+              alt="Food App UI image"
               imgSrc={imagesPath + "foodapp.jpg"}
               figProtoLink="https://www.figma.com/proto/hgwZEp08VhEZTWDQdwykFS/Food-App?type=design&node-id=439-238&t=vDz2DnS6iSYap5hX-1&scaling=scale-down&page-id=439%3A6&starting-point-node-id=439%3A238&mode=design"
             />
@@ -136,11 +140,13 @@ export default function Home() {
             <div className="flex flex-col items-center self-center justify-center grid-cols-2 gap-5 px-4 py-4 tablet:flex-row desktop:flex-row mb-11 rounded-xl w-fit">
               <SocialCard
                 title="Instagram"
+                alt="Instagram icon"
                 imgSrc={imagesPath + "social-media-icons/instagram_48px.png"}
                 socialLink="https://instagram.com/awsidev"
               />
               <SocialCard
                 title="Dribbble"
+                alt="Dribbble icon"
                 imgSrc={imagesPath + "social-media-icons/dribbble_48px.png"}
                 socialLink="https://dribbble.com/ahmedawsi"
               />

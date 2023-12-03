@@ -13,7 +13,6 @@ const dmseriftext = DM_Serif_Text({
 
 export const metadata = {
   title: 'Awsi Dev',
-  description: 'Ahmed Awsi\'s portfolio',
 }
 
 export default function RootLayout({ children }) {

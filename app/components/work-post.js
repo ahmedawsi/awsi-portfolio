@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useRef, useLayoutEffect } from "react";
 
-export default function WorkPost({ title, imgSrc, figProtoLink }) {
+export default function WorkPost({ alt, title, imgSrc, figProtoLink }) {
   const [isOpen, setIsOpen] = useState(true);
   
   return (
@@ -13,10 +14,13 @@ export default function WorkPost({ title, imgSrc, figProtoLink }) {
         setIsOpen(!isOpen);
       }}
     >
-      <img
+      <Image
+        alt={alt}
         layout="position"
         src={imgSrc}
         className="object-cover w-full h-full rounded-md drop-shadow-[0_5px_8px_rgba(0,0,0,0.5)]"
+        width="350"
+        height="350"
       />
 
       <div
@@ -42,30 +46,6 @@ export default function WorkPost({ title, imgSrc, figProtoLink }) {
           </a>
         ) : null}
       </div>
-
-      {/* <AnimatePresence>
-        <motion.div
-          id="details_div"
-          layout="position"
-          transition={{
-            duration: 1,
-            ease: "easeInOut",
-            type: "spring",
-          }}
-          ref={detailsRef}
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          exit={{ opacity: 0 }}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-          recusandae aliquam optio fugiat labore! Nobis quod quia accusamus
-          ipsum veniam.
-        </motion.div>
-      </AnimatePresence> */}
     </div>
   );
 }

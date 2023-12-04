@@ -17,8 +17,8 @@ export default function WorkPost({ alt, title, imgSrc, figProtoLink }) {
         alt={alt}
         src={imgSrc}
         className="object-cover w-full h-full rounded-md drop-shadow-[0_5px_8px_rgba(0,0,0,0.5)]"
-        width="350"
-        height="350"
+        width="1080"
+        height="1080"
       />
 
       <div

@@ -8,8 +8,8 @@ export default function SocialCard({ alt, title, imgSrc, socialLink }) {
           alt={alt}
           src={imgSrc}
           className="object-cover h-[30px] w-[30px] rounded-md drop-shadow-md"
-          width="30"
-          height="30"
+          width="60"
+          height="60"
         />
         <p>{title}</p>
       </div>

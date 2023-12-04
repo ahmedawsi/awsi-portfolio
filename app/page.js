@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         <img
-          src={imagesPath + "ahmedphoto.jpg"}
+          src="media/ahmedphoto.jpg"
           className="z-0 object-cover w-full h-full opacity-20"
           alt="A photo of Ahmed"
           fill="true"

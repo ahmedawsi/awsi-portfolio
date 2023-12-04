@@ -52,8 +52,8 @@ export default function Home() {
           <div className="w-[1.5px] h-[185px] bg-gray-400 self-center" />
         </div>
 
-        <Image
-          src={imagesPath + "ahmedphoto.jpg"}
+        <img
+          src="/media/ahmedphoto.jpg"
           className="z-0 object-cover w-full h-full opacity-20"
           alt="A photo of Ahmed"
           fill="true"

@@ -65,6 +65,7 @@ const MyDesigns = () => {
                 image={item.image}
                 title={item.title}
                 url={item.url}
+                loading="eager"
               />
             </FadeContent>
           ))}

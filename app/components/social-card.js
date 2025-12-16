@@ -1,16 +1,11 @@
+import { IconBrandDribbble } from "@tabler/icons-react";
 import Image from "next/image";
 
-export default function SocialCard({ alt, title, imgSrc, socialLink }) {
+export default function SocialCard({ title, socialLink, socialIcon }) {
   return (
     <a href={socialLink} target="_blank" className="w-fit h-fit">
-      <div className="flex flex-row items-center w-full h-fit gap-2 py-2 px-3 bg-white/5 backdrop-blur-lg hover:scale-105 transition rounded-xl">
-        <Image
-          alt={alt}
-          src={imgSrc}
-          className="object-cover h-[30px] w-[30px] rounded-md drop-shadow-md"
-          width="60"
-          height="60"
-        />
+      <div className="flex flex-row items-center w-full h-fit gap-2 py-2 px-3 bg-transparent border-2 backdrop-blur-xl hover:scale-105 transition rounded-xl">
+        {socialIcon && socialIcon}
         <p>{title}</p>
       </div>
     </a>

@@ -2,6 +2,7 @@ import React from "react";
 import SocialCard from "../social-card";
 import FadeContent from "@/components/FadeContent";
 import Silk from "@/components/Silk";
+import { IconBrandDribbble, IconBrandInstagram } from "@tabler/icons-react";
 
 const SocialAccounts = () => {
   const imagesPath = "/media/";
@@ -16,10 +17,10 @@ const SocialAccounts = () => {
         WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%)"
       }}
     >
-      <div className="absolute z-20 flex flex-col items-center justify-start pt-70 md:justify-center md:pt-0 w-full h-full gap-3">
+      <div className="absolute z-20 gap-10 flex flex-col items-center justify-start pt-70 md:justify-center md:pt-0 w-full h-full">
         <FadeContent delay={400}>
           <p className="text-4xl md:text-5xl font-medium font-serif text-center">Social Accounts</p>
-          <p className="h-2" />
+          <p className="h-4 md:h-6" />
           <p className="text-md md:text-xl text-center font-serif opacity-70">
             I publish all the good stuff there!
           </p>
@@ -28,14 +29,12 @@ const SocialAccounts = () => {
           <div className="flex flex-col items-center justify-center grid-cols-2 gap-5 tablet:flex-row desktop:flex-row mb-11 w-fit">
             <SocialCard
               title="Instagram"
-              alt="Instagram icon"
-              imgSrc={imagesPath + "social-media-icons/instagram_48px.png"}
+              socialIcon={<IconBrandInstagram />}
               socialLink="https://instagram.com/awsidev"
             />
             <SocialCard
               title="Dribbble"
-              alt="Dribbble icon"
-              imgSrc={imagesPath + "social-media-icons/dribbble_48px.png"}
+              socialIcon={<IconBrandDribbble />}
               socialLink="https://dribbble.com/ahmedawsi"
             />
           </div>

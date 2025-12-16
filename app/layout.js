@@ -14,7 +14,7 @@ const quicksand = Quicksand({
 })
 
 export const metadata = {
-  title: 'Awsi Dev',
+  title: 'Ahmed\'s Portfolio',
 }
 
 export default function RootLayout({ children }) {

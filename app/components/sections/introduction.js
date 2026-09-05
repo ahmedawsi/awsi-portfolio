@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import FadeContent from '@/components/FadeContent.jsx';
 import { IconArrowDown } from '@tabler/icons-react';
-import React, { useState, useEffect } from 'react'
 
 const Introduction = () => {
   const [arrowOpacity, setArrowOpacity] = useState(1);
@@ -15,7 +15,7 @@ const Introduction = () => {
         }
       },
       {
-        threshold: 0.1, // Trigger when 10% of the target is visible
+        threshold: 0.1,
       }
     );
 
@@ -32,28 +32,37 @@ const Introduction = () => {
   }, []);
 
   return (
-    <div id="home" className="h-screen overflow-hidden" style={{ position: "relative" }}>
+    <section id="home" className="h-screen overflow-hidden" style={{ position: "relative" }}>
       <div className="absolute z-20 flex flex-col items-center justify-start pt-70 md:justify-center md:pt-0 w-full h-full gap-3">
-        <div className="flex flex-row gap-2">
-          <FadeContent delay={400}>
-            <p className="text-4xl font-serif font-regular text-white">hello,</p>
-          </FadeContent>
-          <FadeContent delay={1200}>
-            <p className="text-4xl font-serif font-regular text-white"> this is ahmed</p>
-          </FadeContent>
-        </div>
+        <h1 className="flex flex-col items-center gap-3 text-center">
+          <span className="flex flex-row gap-2">
+            <FadeContent delay={400}>
+              <span className="text-4xl font-serif font-normal text-white">hello,</span>
+            </FadeContent>
+            <FadeContent delay={1200}>
+              <span className="text-4xl font-serif font-normal text-white"> this is ahmed</span>
+            </FadeContent>
+          </span>
 
-        <FadeContent delay={2200}>
-          <p className="text-4xl font-serif text-center font-regular text-white">software developer & ui/ux designer</p>
-        </FadeContent>
+          <FadeContent delay={2200}>
+            <span className="text-3xl md:text-4xl font-serif text-center font-normal text-white/90">
+              software developer & ui/ux designer
+            </span>
+          </FadeContent>
+        </h1>
+
         <FadeContent delay={3200}>
           <div style={{ opacity: arrowOpacity, transition: 'opacity 0.5s ease-in-out' }}>
-            <IconArrowDown className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-85" size={25} />
+            <IconArrowDown
+              className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-85 text-white animate-bounce"
+              size={25}
+              aria-hidden="true"
+            />
           </div>
         </FadeContent>
-      </div >
-    </div >
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Introduction
+export default Introduction;
